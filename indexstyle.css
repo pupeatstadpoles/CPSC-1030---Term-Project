@@ -1,0 +1,356 @@
+@font-face {
+    font-family: 'OpenDyslexic Bold';
+    src: url('fonts/opendyslexic-bold-webfont.woff2') format('woff2'),
+        url('fonts/OpenDyslexic-Bold.otf') format('opentype'),
+        url('fonts/opendyslexic-bold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('fonts/opendyslexic-regular-webfont.woff2') format('woff2'),
+        url('fonts/OpenDyslexic-Regular.otf') format('opentype'),
+        url('fonts/OpenDyslexic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', 'Monaco', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+header {
+    background-color: inherit;
+    width: 100%;
+    height: 40px;
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 90%;
+}
+
+
+/* Three column layout in landing page*/
+.onethird {
+    display: flex;
+    background-color: yellowgreen;
+    width: calc(100%/3);
+    text-align: center;
+    padding: 5%;
+    flex-basis: 30%;
+    flex-shrink: 1;
+    flex-grow: 4;
+    /* Make sure that the content doesn't spill out */
+    overflow-wrap: break-word;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.onethird a, p, h1, img {
+    background-color: transparent;
+}
+
+.onethird a {
+    font-size: 24px;
+    text-decoration: solid;
+    color: black;
+    font-style: oblique;
+    font-weight: bolder;
+}
+
+.onethird h1 {
+    font-size: 48px;
+}
+
+.onethird p {
+    padding: 10%
+}
+
+.onethird:active a {
+    color: coral;
+}
+
+.onethird:hover {
+    background-color: rgb(90, 139, 0);
+    transition: 0.2s;
+}
+
+.onethird:hover a {
+    color: azure;
+}
+
+.onethird:hover p {
+    color: azure;
+}
+
+
+.onethird a:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+.onethird:active a {
+    color: chocolate;
+}
+
+
+/* Slow fade-out */
+.onethird:not(hover), .onethird a:not(hover), .onethird p:not(hover), .onethird h1:not(hover) {
+    transition: 1s;
+}
+
+
+/* Hide paragraphs until hover*/
+.onethird:not(hover) p {
+    color: transparent;
+}
+
+
+
+/* The external link to my twitch */
+#twitch {
+    background-color: rebeccapurple;
+}
+
+#twitch img {
+    display: block;
+    padding: 30px 10px 0px 40%;
+    height: 100%;
+    width: 80%;
+    object-fit: scale-down;
+    margin-top: 20%;
+}
+
+#twitch a {
+    color: blanchedalmond;
+}
+
+#twitch:hover {
+    background-image: url(images/VTube_Studio_2022-09-18_10-43-29.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-size: cover;
+}
+
+#twitch:hover img {
+    opacity: 90%;
+}
+
+#twitchlogo:hover {
+    opacity: 80%;
+    transition: 0.2s;
+}
+
+
+/* Make text transparent on hover*/
+#twitch:hover a {
+    color: transparent;
+}
+
+#twitch:hover p {
+    color: black;
+}
+
+#twitch:not(hover) {
+    transition: ease-in;
+}
+
+
+
+/* Button for dyslexia-mode toggle */
+#dyslexia-toggle {
+    float: right;
+    align-self: flex-end;
+    margin: 0;
+    background-color: inherit;
+    border: none;
+}
+
+#dyslexia-toggle:hover {
+    background-color: aliceblue;
+    color: brown;
+    transition: 1s;
+    padding: 1.5px 0 1px 1%;
+}
+
+#dyslexia-toggle:not(hover) {
+    transition: 1s;
+}
+
+
+
+/* Settings for dyslexia-mode*/
+.dyslexia-mode {
+    letter-spacing: 0.35ch;
+    word-spacing: 1.225ch;
+    /* 3.5x letter-spacing */
+    font-variant-ligatures: none;
+    /* explicitly disable ligatures */
+    font-family: 'OpenDyslexic', 'OpenDyslexic Bol' 'Arial', 'Comic Sans', 'Open Sans';
+    background-image: none;
+    transition: 0.2s;
+}
+
+.dyslexia-mode * {
+    font-family: 'OpenDyslexic', 'OpenDyslexic Bold', 'Arial', 'Comic Sans', 'Open Sans';
+}
+
+.dyslexia-mode header {
+    height: 15%;
+    display: block;
+}
+
+.dyslexia-mode #twitch:hover {
+    background-image: unset;
+    background-color: rgb(99, 79, 118);
+}
+
+
+.dyslexia-mode #twitchlogo:hover {
+    opacity: 70%;
+}
+
+.dyslexia-mode #twitch:hover a {
+    color: aliceblue;
+}
+
+
+.dyslexia-mode strong {
+    color: #000;
+}
+
+
+.dyslexia-mode main {
+    line-height: 2.0;
+}
+
+.dyslexia-mode main p {
+    margin-top: 3.5em;
+}
+
+footer {
+    background-color: bisque;
+    width: 100%;
+    clear: both;
+    height: 2em;
+}
+
+/*On smaller-screens, get rid of shit*/
+@media screen and (max-width: 890px) {
+    * {
+        font-size: small;
+    }
+
+    a {
+        display: block;
+        height: fit-content;
+        margin: 10px;
+        flex-grow: 2;
+    }
+
+    p {
+        display: block;
+    }
+
+    header {
+        height: 20%;
+        display: block;
+        padding: 20px;
+    }
+
+    header img {
+        width: 100%;
+    }
+
+
+    main {
+        align-items: stretch;
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+
+    .onethird {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        clear: both;
+        align-items: center;
+        flex-basis: 100%;
+        flex-grow: 1;
+        padding: 10%;
+        margin: 0;
+        background-image: unset;
+    }
+
+
+    .onethird p {
+        margin-left: 10px;
+        font-size: 24px;
+    }
+
+
+
+    #twitch img {
+        display: block;
+    }
+
+    #twitch #twitchlogo {
+        display: block;
+        align-self: center;
+        padding: 10px 40px 10px 10px;
+    }
+
+    #twitch img:hover {
+        opacity: 99%;
+        transition: 1s;
+    }
+
+    .onethird:active {
+        background-color: grey;
+    }
+
+    #dyslexia-toggle {
+        height: 90px;
+        font-size: 30px;
+        font-weight: bold;
+        width: 100%;
+        max-width: 100%;
+        padding: 10px 20%;
+        margin: 0;
+    }
+
+    #dyslexia-toggle:hover {
+        background-color: aliceblue;
+        color: brown;
+        transition: 1s;
+        padding: 2px 0 2px 0;
+    }
+
+    #dyslexia-toggle:active {
+        font-weight: bolder;
+    }
+
+    .onethird:not(hover) p {
+        color: black;
+    }
+
+
+    header img {
+        max-width: 100%;
+    }
+}

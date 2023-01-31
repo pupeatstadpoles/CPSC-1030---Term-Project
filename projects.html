@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Current projects I'm working on">
+    <meta name="keywords" content="projects, project, porject, hobby, hobbies, portfolio">
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Import Roboto Mono font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Current Projects</title>
+    <style>
+        ul.breadcrumb {
+            left: -250px;
+            padding-right: 30px;
+        }
+
+        .content {
+            row-gap: 20px;
+        }
+
+        .content a {
+            color: rgb(255, 226, 164);
+        }
+
+        .content a:hover {
+            color: rgb(52, 52, 128);
+        }
+
+        .toprow,
+        .middlerow,
+        .endrow {
+            align-content: center;
+        }
+
+        .toprow {
+            background-color: rgb(9, 108, 62);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .toprow ul,
+        ul li {
+            background-color: rgb(127, 139, 106);
+        }
+
+
+
+        .middlerow {
+            background-color: rgb(33, 74, 2);
+            border-radius: 10px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .endrow {
+            background-color: rgb(31, 94, 18);
+            border-radius: 10px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .endrow ul,
+        ul li {
+            background-color: inherit;
+        }
+
+        .dyslexia-mode ul.breadcrumb {
+            left: -350px;
+            margin-top: 40px;
+            padding-right: 40px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="wrapper">
+        <header style="text-align: center;">
+            <a href="index.html"><img src="images/4.jpg" alt="Banner"></a>
+        </header>
+
+        <main>
+            <nav class="topnav" id="topnav">
+                <a href="projects.html" class="active">Projects</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="educ.html">Portfolio</a>
+                <a href="resource.html" class="hide"> Resources</a>
+                <!--External link to Twitch-->
+                <a href="https://twitch.tv/pupeatstadpoles" target="_blank">Twitch</a>
+                <!--Dyslexia mode toggle button-->
+                <button id="dyslexia-toggle" type="button" aria-pressed="false">Dyslexia-friendly</button>
+                <a href="javascript:void(0);" class="icon" onclick="topnavPain()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+            <ul class="breadcrumb">
+                <li><a href="educ.html">Portfolio</a></li>
+                <li>Projects</li>
+            </ul>
+            <div class="content">
+
+                <p class="toprow">I'm working on a homelab, which is a home server environment where you can tinker with
+                    selfhosting lots of cool things! Some of the things I would like to look into are: </p>
+                <ul class="toprow">
+                    <li>
+                        <a href="https://jellyfin.org/">Jellyfin</a>: A selfhosted media server, like Plex but FOSS
+                    </li>
+                    <li>
+                        <a href="https://www.docker.com/">Docker</a>: A containerized way to run applications
+                    </li>
+                    <li>
+                        <a href="https://tailscale.com/">Tailscale</a>: An easier way to setup a WireGuard network
+                    </li>
+                </ul>
+
+                <!-- <iframe width="100%" height="360" src="https://www.youtube.com/embed/f5jNJDaztqk"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen &cc_lang_pref=en &cc_load_policy=1 class="toprow"></iframe> -->
+
+                <div class="middlerow">
+                    <p>I'm working on a discord bot written in Java!</p>
+                </div>
+                <div id="github" class="middlerow">
+                    <a href="https://github.com/pupeatstadpoles" target="_blank">My Github page</a>
+                </div>
+                <div id="live2d" class="endrow">
+                    <p>The ability to make a 2D image move like an animation has always been really cool. I'm learning
+                        Live2D rigging in my spare time to try and rig a Vtuber model all on my own so it can be used
+                        for Vtubing!</p>
+                </div>
+                <div class="endrow">
+                    <p>A Vtuber (virtual youtuber) is a content creator that uses a virtual avatar in place of a
+                        facecam. The avatar can be a 3d model or a 2d model, and it combines art, face tracking as well
+                        as body tracking to allow Vtubers to express themselves in ways that a facecam wouldn't permit.
+                        <br><br> As a Vtuber, you are no longer limited to showing yourself as a human. The only limit
+                        is your imagination!
+                    </p>
+                    <br>
+
+
+                </div>
+            </div>
+
+
+        </main>
+        <footer>footer things here</footer>
+        <script src="scripts.js" defer></script>
+    </div>
+</body>
+
+
+
+</html>

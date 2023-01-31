@@ -1,0 +1,683 @@
+@font-face {
+    font-family: 'OpenDyslexic Bold';
+    src: url('fonts/opendyslexic-bold-webfont.woff2') format('woff2'),
+        url('fonts/OpenDyslexic-Bold.otf') format('opentype'),
+        url('fonts/opendyslexic-bold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('fonts/opendyslexic-regular-webfont.woff2') format('woff2'),
+        url('fonts/OpenDyslexic-Regular.otf') format('opentype'),
+        url('fonts/OpenDyslexic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', 'Monaco', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #333;
+}
+
+
+header {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    background-color: inherit;
+    position: static;
+    height: 20%;
+    padding-top: 15px;
+}
+
+header img {
+    width: 100%;
+    height: fit-content;
+}
+
+main {
+    margin: 0;
+    max-width: 100%;
+    background-color: #333;
+}
+
+footer {
+    clear: both;
+    background-color: rgb(250, 226, 9);
+    color: #000;
+}
+
+/* Force older versions of Internet Explorer to display these HTML5 elements with block display. */
+header,
+nav,
+main,
+footer,
+aside,
+figure {
+    display: block;
+}
+
+
+/* Use a grid layout of 3 rows and  */
+.content {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    color: #ddd;
+    padding: 30px 30px 40px 30px;
+    align-content: space-between;
+    overflow-wrap: break-word;
+}
+
+/* Styling the links */
+.content a {
+    text-decoration: none;
+    color: #1677cc;
+}
+
+.content a:focus {
+    color: #ceea92;
+}
+
+.content a:hover {
+    color: #04AA6D;
+}
+
+/* Configure all rows to be flexbox, no wrap and aligned center */
+.toprow, .middlerow, .endrow {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toprow {
+    grid-row-start: 1;
+    justify-content: space-between;
+}
+
+
+#textbs {
+    background-color: #304208;
+    flex-grow: 4;
+    border-radius: 20px;
+    border: 2px solid;
+    flex-basis: 60%;
+}
+
+#textbs p {
+    background-color: inherit;
+    text-align: center;
+    padding: 20%;
+}
+
+#topright {
+    flex-grow: 2;
+    text-align: center;
+    padding: 20%;
+    border-radius: 15px 50px 30px;
+    border: 2px solid;
+    background-color: rgb(49, 49, 48);
+}
+
+#topright p, a {
+    background-color: inherit;
+}
+
+.toprow img {
+    height: 300px;
+    width: 300px;
+    margin: auto 20px;
+}
+
+.toprow li {
+    margin: 10px;
+}
+
+
+#homelab p, ul {
+    padding: 10px;
+}
+
+.middlerow {
+    grid-row-start: 2;
+    text-align: center;
+}
+
+.middlerow img {
+    max-height: 300px;
+    max-width: 300px;
+    opacity: 60%;
+}
+
+.middlerow img:hover {
+    opacity: 100%;
+    transition: 1s;
+}
+
+.middlerow img:not(hover) {
+    transition: 3s;
+}
+
+#midtext {
+    background-color: darkgreen;
+    padding: 20px;
+    border-radius: 50px 14px;
+}
+
+.endrow {
+    grid-row-start: 3;
+}
+
+#resourcelink {
+    padding: 20px;
+    background-color: rgb(248, 248, 174);
+    color: #02090f;
+    border-radius: 40px;
+}
+
+#resourcelink a, p {
+    background-color: inherit;
+}
+
+#bongofrog {
+    height: 300px;
+    opacity: 0%;
+}
+
+#bongofrog:hover {
+    opacity: 100%;
+}
+
+#live2d {
+    margin-top: 20px;
+}
+
+
+
+/* Breadcrumb list */
+ul.breadcrumb {
+    padding: 10px;
+    list-style: none;
+    background-color: #eee;
+    position: fixed;
+    transition: 0.9s;
+    opacity: 80%;
+}
+
+/* Show the whole thing on hover*/
+ul.breadcrumb:hover {
+    left: 0;
+    opacity: 100%;
+}
+
+
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+    background-color: #eee;
+    color: #000;
+}
+
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li + li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+    background-color: #eee;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+
+
+/* Settings for dyslexia-mode*/
+.dyslexia-mode {
+    letter-spacing: 0.35ch;
+    word-spacing: 1.225ch;
+    /* 3.5x letter-spacing */
+    font-variant-ligatures: none;
+    /* explicitly disable ligatures */
+}
+
+.dyslexia-mode * {
+    font-family: 'OpenDyslexic', 'OpenDyslexic Bold', 'Arial', 'Comic Sans', 'Open Sans';
+}
+
+.dyslexia-mode header {
+    height: fit-content;
+    margin-bottom: 10px;
+}
+
+.dyslexia-mode header a {
+    width: 100%;
+}
+
+.dyslexia-mode header img {
+    height: 100%;
+    padding: auto;
+}
+
+/* Change the margin for topnav if dyslexia mode is on*/
+.dyslexia-mode .topnav {
+    margin-top: -20px
+}
+
+.dyslexia-mode .topnav a {
+    padding-top: 30px;
+}
+
+
+.dyslexia-mode strong {
+    color: #000;
+}
+
+
+.dyslexia-mode main {
+    line-height: 2.0;
+}
+
+.dyslexia-mode main p {
+    margin-top: 3.5em;
+}
+
+.dyslexia-mode #dyslexia-toggle {
+    color: #84b8e6;
+    font-style: italic;
+    padding: 34px;
+}
+
+.dyslexia-mode #dyslexia-toggle:hover {
+    color: #255d8f;
+}
+
+/* The dyslexia toggle button*/
+#dyslexia-toggle {
+    padding: 36px;
+    max-height: 92px;
+    margin: 0;
+    background-color: inherit;
+    font: inherit;
+    border-style: none;
+    color: whitesmoke;
+}
+
+#dyslexia-toggle:hover {
+    background-color: #ddd;
+    margin: 0;
+    color: rgb(133, 10, 10);
+    transition: 0.5s;
+}
+
+.dyslexia-mode ul.breadcrumb:hover {
+    left: 0;
+}
+
+.dyslexia-mode .toprow p {
+    align-items: center;
+    padding: 30px;
+}
+
+
+
+/* Add a black background color to the top navigation, make it sticky */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    position: sticky;
+    top: 10px;
+    height: 20%;
+    max-height: 20%;
+    max-height: 92px;
+    z-index: 2;
+}
+
+
+/* Hide these links unless small screen where breadcrumb is not displayed  */
+.topnav a.hide {
+    display: none;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 35px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+/* Change the color of links on hover */
+.topnav a:not(i):hover {
+    background-color: #ddd;
+    color: black;
+    transition: 1s;
+}
+
+.topnav a:hover i {
+    background-color: #ddd;
+}
+
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+    height: 100%;
+}
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+
+
+/* for about page */
+
+.middlerow #froggif {
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+/*Stuff for contact.html*/
+#message {
+    grid-row: 1 / 2;
+}
+
+#personal {
+    grid-row: 2 / 3;
+}
+
+#comments {
+    grid-row: 3 / 4;
+}
+
+#comments textarea {
+    background-color: #ceea92;
+    color: #000;
+    width: 80%;
+    height: 40%;
+}
+
+
+#resourcetable {
+    color: #eee;
+    padding: 20px;
+}
+
+table {
+    margin-top: 30px;
+}
+
+table a {
+    color: #ceea92;
+}
+
+table a:active {
+    color: chartreuse;
+}
+
+table a:hover {
+    color: #84b8e6;
+}
+
+
+
+table .resourcedescription {
+    border-left: solid 5px salmon;
+    border-bottom: solid 2px salmon;
+    text-align: right;
+}
+
+table th {
+    font-size: larger;
+    font-weight: bold;
+    padding-bottom: 20px;
+
+}
+
+table.dyslexia-mode td {
+    padding: 20px;
+}
+
+#responsivetable {
+    display: none;
+}
+
+/* When the screen is less than 850 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 850px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .content {
+        display: block;
+    }
+
+    .dyslexia-mode #froggif, .dyslexia-mode #bongofrog, .dyslexia-mode #graphic, .dyslexia-mode #ribbit {
+        display: none;
+    }
+
+    .toprow, .middlerow, .endrow {
+        flex-flow: column wrap;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+        margin: 10px;
+    }
+
+    #froggif {
+        align-items: center;
+    }
+
+    .hide {
+        float: none;
+        display: block;
+        text-align: left;
+        padding-left: 32px;
+    }
+
+    header img {
+        max-width: 100%;
+    }
+
+    iframe {
+        max-width: 100%;
+    }
+
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 850px) {
+    .topnav.responsive {
+        position: relative;
+        transition: 1s;
+        max-height: max-content;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        padding-left: 32px;
+    }
+
+    .topnav.responsive #dyslexia-toggle {
+        width: 100%;
+        text-align: left;
+    }
+
+    .hide {
+        float: none;
+        display: block;
+        text-align: left;
+        padding-left: 32px;
+    }
+}
+
+/* If dyslexia mode is on, change the top nav if the screen width is less than 965px instead */
+@media screen and (max-width: 985px) {
+    .dyslexia-mode .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .dyslexia-mode .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 985px) {
+    .dyslexia-mode .topnav.responsive {
+        position: relative;
+        transition: 1s;
+    }
+
+    .dyslexia-mode .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .dyslexia-mode .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+}
+
+
+
+
+/* Hide breadcrumb for smaller screens and change video dimensions */
+@media only screen and (max-width:500px) {
+    .breadcrumb {
+        display: none;
+    }
+
+    iframe {
+        align-self: center;
+
+    }
+
+    #resourcetable {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+/* For contact.html, when screen is smaller than 775px */
+@media screen and (max-width: 775px) {
+
+    /*Turn them into column flexboxes*/
+    #personal {
+        display: flex;
+        flex-flow: column nowrap;
+        overflow-wrap: break-word;
+        align-items: baseline;
+    }
+
+    /*the text inputs plus the labels*/
+    .labeldetail {
+        flex-shrink: 1;
+    }
+
+
+    .formbuttons {
+        margin-top: 20px;
+        justify-content: flex-start;
+
+    }
+
+    #comments {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: baseline;
+    }
+
+    #comments textarea {
+        max-width: 80%;
+        flex-wrap: wrap;
+        max-height: 80%;
+
+    }
+}
+
+@media screen and (max-width: 450px) {
+    /* The dyslexia toggle button*/
+
+    #dyslexia-toggle {
+        padding: 30px 20px 30px;
+        max-width: 40%;
+    }
+
+    .dyslexia-mode a {
+        max-width: 40%;
+        font-size: small;
+    }
+
+    .dyslexia-mode #dyslexia-toggle {
+        padding-top: 20px;
+        max-width: 130px;
+        font-size: small;
+        height: inherit;
+    }
+
+    #graphic img {
+        height: 200px;
+        width: 200px
+    }
+
+
+}
+
+@media screen and (max-width: 400px) {
+
+    #dyslexia-toggle {
+        max-width: 116px;
+        overflow-wrap: normal;
+    }
+}
